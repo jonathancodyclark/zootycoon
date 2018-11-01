@@ -6,7 +6,18 @@ db = pymysql.connect(host='academic-mysql.cc.gatech.edu', port=3306,
 
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
+'''
 cursor.execute("show tables")
+
+cursor.execute("CREATE TABLE exhibits ("
+               "name_exhibit varchar(100) NOT NULL, "
+               "water_feature boolean NOT NULL, "
+               "size int NOT NULL, "
+               "PRIMARY KEY (name_exhibit))")
+
+'''
+cursor.execute("insert into exhibits values ('polar', TRUE, '5')")
+cursor.execute("select * from exhibits")
 tables = cursor.fetchall()
 print tables
 db.close()
