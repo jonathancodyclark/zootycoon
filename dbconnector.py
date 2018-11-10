@@ -19,7 +19,7 @@ cursor.execute("CREATE TABLE exhibits ("
 cursor.execute("insert into exhibits values ('polar', TRUE, '5')")
 cursor.execute("select * from exhibits")
 tables = cursor.fetchall()
-print tables
+print (tables)
 db.close()
 
 ''''
