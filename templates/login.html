@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h1>Enter Credentials</h1>
+    <br>
+    <form action = "/login/result" method="post">
+        Username: <br>
+        <input type="text" placeholder="Username" name="username">
+        <br>
+        Password: <br>
+        <input type="password" placeholder="Password" name="password">
+
+        <br>
+        <input type="submit" value="Login">
+    </form>
+
+    <p> {{error}} </p>
+
+    <br>
+
+    <form action="{{ url_for('register') }}">
+        <input type="submit" value="Registration" />
+    </form>
+  </body>
+</html>

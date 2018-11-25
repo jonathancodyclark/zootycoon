@@ -1,7 +1,7 @@
-<html>EXHIBITS PAGE</html>
+{% extends "layout.html" %}
 
-<div>
+{% block content %}
     {% for e in zoo_exhibits %}
     <p> {{ e.get("name_exhibit") }} </p>
     {% endfor %}
-</div>
+{% endblock content %}
