@@ -3,13 +3,13 @@ from flask import Flask, render_template, request, redirect, url_for, make_respo
 
 app = Flask(__name__)
 
-db = pymysql.connect(host='academic-mysql.cc.gatech.edu', port=3306,
+def execute_query(query):
+    db = pymysql.connect(host='academic-mysql.cc.gatech.edu', port=3306,
                          user='cs4400_group14', passwd='AMEb4bEi', db='cs4400_group14',
                          cursorclass=pymysql.cursors.DictCursor)
-
-cursor = db.cursor()
-cursor.execute("select * from exhibits")
-zoo_exhibits = cursor.fetchall()
+    cursor = db.cursor()
+    cursor.execute(query)
+    return cursor.fetchall()
 
 
 @app.route('/setcookie', methods=['POST', 'GET'])
@@ -61,9 +61,17 @@ def login_result():
 def register():
     return render_template('register.html')
 
+@app.route("/register/result", methods=['GET', 'POST'])
+def register_result():
+    error = ''
+    if request.method == 'POST':
+        if error == '':
+            return redirect(url_for('exhibits'))
+    return render_template('register.html', error=error)
+
 @app.route("/exhibits", methods=['GET', 'POST'])
 def exhibits():
-    return render_template('exhibits.html', zoo_exhibits=zoo_exhibits, title="Exhibits")
+    return render_template('exhibits.html', zoo_exhibits=execute_query("select * from exhibits"), title="Exhibits")
 
 @app.route("/exhibits/details")
 def exhibits_details():
