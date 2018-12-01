@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Search for Animals</title>
+    <title>Search for Shows</title>
   </head>
 	<style>
 		
@@ -33,26 +33,21 @@ input[type=text] {
 input[type=number] {
     height: 20px;
     line-height: 30px;
-	width:10%;
     font-size: 16px;
     padding: 0 8px;
 }
 .button1 {
     background-color: #5c6053;
     color: white;
-    border: 2px solid #5c6053; /* Green */
+    border: 2px solid #5c6053;
+	padding: 3;
 }
 }
 </style>
 <body>
-	  <center><h4>Exhibit</h4></center>
 	<span class="b">
-	<select>
-		  <option value="0">Region:</option>
-			<option value="1">Pacific</option>
-			<option value="2">Add more</option>
-		</select></span>
-  <h4>Atlanta Zoo Animals</h4>
+	</span>
+	<span class="c"><label>Atlanta Zoo </label></span><span class="c"><label>Shows</label></span>
   <br>
    <div class="container">
   <form action="search">
@@ -60,32 +55,29 @@ input[type=number] {
       <div class="col-75">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<form class="Exhibit Search" action="exibitsearch.php">
+<br><br>
+		  <form class="Exhibit Search" action="exibitsearch.php">
+	<span class="c">
+		<label for="aName">Name</label></span>
 	
-	<label for="aName">Name</label>
-	
-  <input type="text" placeholder="Animal name" name="search">
-<span class="c"><label for="size2">Age: </label></span>
-  <input type="number" placeholder="MIN">
-	  	<input type="number" placeholder="MAX">
+  <input type="text" placeholder="Feed the fish" name="animal name">
+<span class="c"><label for="size2">Date: </label></span>
+  <input type="date">
 	</form>
 </div>
     </div>
 	  <br><br>
 <div class="row">
-      <div class="col-25">
-        <label for="size4">Species: </label>
-        <input type="number" placeholder="MIN">
-	  	<input type="number" placeholder="MAX">
-<span class="c"><label for="size3">Type: </label></span>
+      <div class="col-25"><span class="c">
+		  <label for="size4">Exhibit: </label></span>
 	  	<select>
-		  <option value="0">Select Type:</option>
-			<option value="1">Fish</option>
-			<option value="2">Bird</option>
-	  	</select>
-
+		  <option value="0">Region:</option>
+			<option value="1">Pacific</option>
+			<option value="2">Add more</option>
+		</select>
+		<button class="button1" type="submit"><em class="fa fa-search"></em></button>
       </div>
-	<center><br><button type="submit"><em class="fa fa-search"></em></button><br><br>
+	<center><br>
 <table width="200" border="1">
   <tbody>
     <tr>
@@ -110,7 +102,8 @@ input[type=number] {
 </table>
  </center>
   </div>
-
+<br>
+<center><button class="button1">Log Visit</button></center>
 
 
 </form>
