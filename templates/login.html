@@ -22,11 +22,11 @@ input[type=text], input[type=password] {
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
+    padding: 10px 18px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 20%;
 }
 
 /* Add a hover effect for buttons */
@@ -40,7 +40,12 @@ button:hover {
     padding: 10px 18px;
     background-color: #f44336;
 }
-
+.regbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #41c7f4;
+	width: 30%;
+}
 /* Center the avatar image inside this container */
 .imgcontainer {
     text-align: center;
@@ -85,7 +90,8 @@ span.psw {
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit">Login</button>
+    <button type="submit">Login</button><br>
+	<button type="submit" class="regbtn">Registration</button><br>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
