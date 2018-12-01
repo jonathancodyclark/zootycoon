@@ -2,25 +2,32 @@
   <head>
     <title>Exhibits</title>
   </head>
-  <body>
-	  <center><h4>Exhibits</h4></center>
-  <h2>Atlanta Zoo</h2>
-  <br>
-   <div class="container">
-  <form action="search">
-    <div class="row">
-      <div class="col-75">
-        <label for="aName">Name</label>
-        <input type="text" id="aName" name="animalName" placeholder="Animal Name">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="size">Size</label>
-      </div>
-    </div>
+	<style>
+		
+span.a {
+    display: inline; /* the default for span */
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;    
+    background-color: yellow; 
+}
 
-    <style>
+span.b {
+    display: inline-block;
+    
+    padding: 15px; 
+}
+
+span.c {
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;        
+    background-color: yellow; 
+}
+		
 input[type=text] {
     height: 30px;
     line-height: 30px;
@@ -46,9 +53,76 @@ input[type=number]:hover::-webkit-inner-spin-button {
     border-radius: 28px;
 }
 </style>
-
-<input type="number" value="0">
-  </form>
+<body>
+	  <center><h4>Exhibits</h4></center>
+  <h2>Atlanta Zoo</h2>
+  <br>
+   <div class="container">
+  <form action="search">
+    <div class="row">
+      <div class="col-75">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<form class="Exhibit Search" action="exibitsearch.php">
+	<span class="b">
+	<label for="aName">Name</label>
+	</span>
+  <input type="text" placeholder="animal name" name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+<span class="b">
+		<label for="size">Num Animals</label>
+	</span>
+		<input type="number" placeholder="MIN">
+	  	<input type="number" placeholder="MAX">
+	</form>
 </div>
-  </body>
+    </div>
+	  <br><br>
+<div class="row">
+      <div class="col-25">
+		  <span class="b">
+        <label for="size">Size</label>	 
+		  </span>
+		<input type="number" placeholder="MIN">
+	  	<input type="number" placeholder="MAX">
+		<span class="b">
+		<label for="size">Water Feature</label>	  
+		  </span>
+		<select>
+			<option value="0">Select Feature:</option>
+			<option value="1">Audi</option>
+			<option value="2">No</option>
+	  	</select>
+
+      </div>
+  </div>
+<br><br>
+<table width="200" border="1">
+  <tbody>
+    <tr>
+      <td>Name: </td>
+      <td> Size:</td>
+      <td>NumAnimals: </td>
+      <td> Water:</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+ 
+
+
+</form>
+</div>
+</body>
 </html>
