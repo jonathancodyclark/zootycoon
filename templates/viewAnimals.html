@@ -40,9 +40,14 @@ input[type=number] {
 .button1 {
     background-color: red;
     color: white;
-    border: 2px solid #5c6053; /* Green */
+    border: 2px solid black;
 }
+.button2 {
+	width: 10%;
+	height: 4%;
+	float: left;
 }
+
 </style>
 <body>
 	  <center><h4>Exhibit</h4></center>
@@ -62,7 +67,7 @@ input[type=number] {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <form class="Exhibit Search" action="exibitsearch.php">
 	
-	<label for="aName">Name</label>
+	<label for="aName">Name:</label>
 	
   <input type="text" placeholder="Animal name" name="search">
 <span class="c"><label for="size2">Age: </label></span>
@@ -75,8 +80,7 @@ input[type=number] {
 <div class="row">
       <div class="col-25">
         <label for="size4">Species: </label>
-        <input type="number" placeholder="MIN">
-	  	<input type="number" placeholder="MAX">
+        <input type="text" placeholder="Animal Species">
 <span class="c"><label for="size3">Type: </label></span>
 	  	<select>
 		  <option value="0">Select Type:</option>
@@ -86,22 +90,25 @@ input[type=number] {
 	  	</select>
 
       </div>
-	<center><br><button type="submit"><em class="fa fa-search"></em></button><br><br>
+	<center><br><button class="button2" type="submit">Search <em class="fa fa-search"></em></button><br><br>
 <table width="80%" border="1">
   <tbody>
     <tr>
       <td>Name: </td>
-      <td> Size:</td>
-      <td>NumAnimals: </td>
-      <td> Water:</td>
+      <td>Species:</td>
+      <td>Exhibit: </td>
+      <td>Age:</td>
+	  <td>Type:</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
     <tr>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
