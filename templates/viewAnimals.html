@@ -33,7 +33,7 @@ input[type=text] {
 input[type=number] {
     height: 20px;
     line-height: 30px;
-	width:10%;
+	width: 13%;
     font-size: 16px;
     padding: 0 8px;
 }
@@ -43,27 +43,41 @@ input[type=number] {
     border: 2px solid black;
 }
 .button2 {
-	width: 10%;
+	width: 13%;
 	height: 4%;
 	float: left;
 }
-
+.button3 {
+	width: 10%;
+	height: 4%;
+	float: right;
+}
+.container {
+    padding: 16px;
+    background-color: #f7da00;
+	border: 3px solid #f1f1f1;
+	width: 80%;
+	text-align: left;
+}
 </style>
 <body>
-	  <center><h4>Exhibit</h4></center>
+	
+	<center><a href="https://ibb.co/JQHh1cC"><img src="https://i.ibb.co/jRDpN8H/Zoo-Tycoon-Logo.png" alt="Zoo-Tycoon-Logo" border="0"></a><br><h4>Exhibit</h4>
 	<span class="b">
-	<select>
-		  <option value="0">Region:</option>
-			<option value="1">Pacific</option>
-			<option value="2">Add more</option>
-		</select></span>
-  <h4>Atlanta Zoo Animals</h4>
-  <br>
+	
+  
+  
    <div class="container">
+	   
   <form action="search">
     <div class="row">
       <div class="col-75">
-        
+        <h4>Atlanta Zoo Animals</h4>
+		  <select class="button3">
+		  <option value="0">Region:</option>
+			<option value="1">Pacific</option>
+			<option value="2">Add more</option>
+		</select>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <form class="Exhibit Search" action="exibitsearch.php">
 	
@@ -91,7 +105,7 @@ input[type=number] {
 
       </div>
 	<center><br><button class="button2" type="submit">Search <em class="fa fa-search"></em></button><br><br>
-<table width="80%" border="1">
+<table width="100%" border="1">
   <tbody>
     <tr>
       <td>Name: </td>
