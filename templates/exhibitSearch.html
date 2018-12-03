@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Exhibits</title>
+  </head>
+
+<body>
+	  <center><a href="https://ibb.co/JQHh1cC"><img src="https://i.ibb.co/jRDpN8H/Zoo-Tycoon-Logo.png" alt="Zoo-Tycoon-Logo" border="0"></a><br><h4>Exhibits</h4>
+    <form action = "/exhibitSearch/result" method="post">
+        Exhibit Name: <br>
+        <input type="text" placeholder="Exhibit Name" name="exhibitName">
+        <br>
+        <br>
+        Num Animals: <br>
+        MIN<INPUT TYPE="NUMBER" MIN="0" MAX="10" STEP="2" VALUE="0" SIZE="6" name="minAnimals"> <!-- value is default value sent-->
+        MAX<INPUT TYPE="NUMBER" MIN="0" MAX="10" STEP="2" VALUE="10" SIZE="6" name="maxAnimals"> <!-- value is default value sent-->
+        <br>
+        <br>
+        Size: <br>
+        MIN<INPUT TYPE="NUMBER" MIN="0" MAX="1000" STEP="100" VALUE="0" SIZE="6" name="minSize"> <!-- value is default value sent-->
+        MAX<INPUT TYPE="NUMBER" MIN="0" MAX="1000" STEP="100" VALUE="1000" SIZE="6" name="maxSize"> <!-- value is default value sent-->
+        <br>
+        <br>
+        Water Feature: <br>
+        <select name="waterFeature">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+
+        <br>
+        <br>
+        SEARCH BY (one of the criteria has to be exhibit name)
+        <br>
+        Criteria 1:
+        <select name="criteria1">
+            <option value=0>blank</option>
+            <option value=1>exhibit name</option>
+            <option value=2>num animals</option>
+            <option value=3>exhibit size</option>
+            <option value=4>water feature</option>
+        </select>
+        <br>
+        Criteria 2:
+        <select name="criteria2">
+            <option value=0>blank</option>
+            <option value=1>exhibit name</option>
+            <option value=2>num animals</option>
+            <option value=3>exhibit size</option>
+            <option value=4>water feature</option>
+        </select>
+        <br>
+        Criteria 3:
+        <select name="criteria3">
+            <option value=0>blank</option>
+            <option value=1>exhibit name</option>
+            <option value=2>num animals</option>
+            <option value=3>exhibit size</option>
+            <option value=4>water feature</option>
+        </select>
+        <br>
+        Criteria 4:
+        <select name="criteria4">
+            <option value=0>blank</option>
+            <option value=1>exhibit name</option>
+            <option value=2>num animals</option>
+            <option value=3>exhibit size</option>
+            <option value=4>water feature</option>
+        </select>
+
+        <br>
+        <br>
+        <input type="submit" name="action" value="Seach">
+
+        <br>
+</form>
+
+<br> {% if tuples %}
+          <table>
+            <thead><tr>
+                {% for key in allowedTupleKeys %}
+                    <th>{{ key }} </th>
+                {% endfor %}
+                    <th> link to exhibit </th>
+            </tr></thead>
+            <tbody>
+                {% for t in tuples %}
+                    <tr>
+                    {% for key in allowedTupleKeys %}
+                    <td>
+                        {% if key == 'water_feature'%}
+                            {% if value == 1 %}
+                                {{'YES'}}
+                            {% else %}
+                                {{'NO'}}
+                            {% endif %}
+                        {% else %}
+                            {{ t.get(key) }}
+                        {% endif %}
+                    </td>
+                    {% endfor %}
+                    <td> <a href="{{ url_for('exhibitDetails', values=t.get('name_exhibit')) }}"> link to {{t.get('name_exhibit')}} </a> </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+       {% endif %}
+<br>
+
+</center></body>>
+
+</html>

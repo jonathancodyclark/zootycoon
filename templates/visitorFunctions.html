@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Visitor Functionality</title>
+</head>
+<style>
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.button2 {background-color: #f44336;}
+.button3 {
+  float: center;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+.container {
+    padding: 16px;
+    background-color: #f7da00;
+	border: 3px solid #f1f1f1;
+	width: 60%;
+}
+</style>
+	<center>
+		<a href="https://ibb.co/JQHh1cC"><img src="https://i.ibb.co/jRDpN8H/Zoo-Tycoon-Logo.png" alt="Zoo-Tycoon-Logo" border="0"></a><br>
+		<div class="container">
+
+<li><a href="{{ url_for('exhibitSearch') }}">Search Exhibits</a></li>
+<li><a href="{{ url_for('exhibitSearch') }}">View Exhibit History</a></li>
+<li><a href="{{ url_for('exhibitSearch') }}">Search Shows</a></li>
+<li><a href="{{ url_for('exhibitSearch') }}">View Show History</a></li>
+<li><a href="{{ url_for('exhibitSearch') }}">Search for Animals</a></li>
+<li><a href="{{ url_for('logout') }}">Log Out</a></li>
+
+
+		</div>
+</center>
+<body>
+</body>
+</html>
